@@ -1,0 +1,56 @@
+{
+  "name": "localizeimg",
+  "displayName": "LocalizeIMG",
+  "description": "Download and localize remote image URLs in your HTML files.",
+  "version": "1.0.0",
+  "icon": "logo.png",
+  "publisher": "VihangaDev",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VihangaDev/LocalizeIMG.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VihangaDev/LocalizeIMG/issues"
+  },
+  "homepage": "https://github.com/VihangaDev/LocalizeIMG#readme",
+  "keywords": [
+    "html",
+    "images",
+    "download",
+    "localize",
+    "web development"
+  ],
+  "activationEvents": [
+    "onCommand:localizeimg.downloadImages"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "localizeimg.downloadImages",
+        "title": "LocalizeIMG: Download Remote Images"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0",
+    "vscode-test": "^1.6.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "license": "MIT"
+}
